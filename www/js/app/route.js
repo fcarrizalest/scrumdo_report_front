@@ -17,7 +17,7 @@ define(['backbone',
 	var initialize = function(){
 
 		var app_router          =   new AppRouter;
-		var $appshell = new AppshellView( app_router, conexion );
+		var $appshell = new AppshellView( app_router );
 		
 
 		if(navigator.serviceWorker != undefined ){

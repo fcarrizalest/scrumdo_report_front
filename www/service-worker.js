@@ -1,5 +1,4 @@
 importScripts('js/lib/sw-toolbox.js');
-importScripts('js/lib/idb.js','js/lib/idbKeyval.js');
 
 
 
