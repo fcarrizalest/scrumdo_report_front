@@ -1,8 +1,11 @@
-define(['backbone', 
+define([
+		'module',
+		'backbone',
+		'app/collections/iterationsCollection',
 		'app/views/appshell/appshell'
 
 	],
-	function( Backbone  , AppshellView  ){
+	function( module, Backbone  , iterations, AppshellView  ){
 
 
 		var AppRouter = Backbone.Router.extend({ 
@@ -18,7 +21,12 @@ define(['backbone',
 
 		var app_router          =   new AppRouter;
 		var $appshell = new AppshellView( app_router );
+		var $iterations_coleccion = new iterations(  );
+
+		$iterations_coleccion.url = module.config().basepath + "iterations";
+		$iterations_coleccion.fetch();	
 		
+		console.log(module);
 
 		if(navigator.serviceWorker != undefined ){
 

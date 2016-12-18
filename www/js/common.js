@@ -11,5 +11,10 @@ requirejs.config({
         underscore: {
             exports: '_'
         }
+    },
+    config: {
+        "app/route":{
+            basepath : "https://a5429.herokuapp.com/api/"
+        }
     }
 });
