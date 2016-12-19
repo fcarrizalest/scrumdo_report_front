@@ -34,8 +34,7 @@ define([
 				console.log("tengo ya un controller");
 
 				var url = navigator.serviceWorker.controller.scriptURL;
-
-
+				
 				  
 			}else {
 				navigator.serviceWorker.register('service-worker.js', {
@@ -56,7 +55,7 @@ define([
 
 		app_router.on('route:defaultRoute', function(){ 
 
-			$appshell.render();
+			
 			 
 		}); 
 
@@ -64,7 +63,7 @@ define([
 
 		Backbone.history.start();
 
-
+		$appshell.render();
 	};
 
 
