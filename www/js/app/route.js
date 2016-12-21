@@ -20,19 +20,24 @@ define([
 	var initialize = function(){
 
 		var app_router          =   new AppRouter;
-		var $appshell = new AppshellView( app_router );
 		var $iterations_coleccion = new iterations(  );
 
-		$iterations_coleccion.url = module.config().basepath + "iterations";
-		$iterations_coleccion.fetch();	
-		
+		var $appshell = new AppshellView( app_router , $iterations_coleccion  );
+
+
+		var dayOfWeek = 3;//friday
+		var date = new Date( );
+		date.setDate(date.getDate() + (dayOfWeek + 7 - date.getDay()) % 7);
+
+		$iterations_coleccion.url = module.config().basepath + "iterations/"+date.getFullYear() + "-"+( date.getMonth()+1 )+"-" + date.getDate();
+		$iterations_coleccion.fetch( {reset:true});	
+		console.log("pp");
 		console.log(module);
 
 		if(navigator.serviceWorker != undefined ){
 
 			if (navigator.serviceWorker.controller) {
 				console.log("tengo ya un controller");
-
 				var url = navigator.serviceWorker.controller.scriptURL;
 				
 				  

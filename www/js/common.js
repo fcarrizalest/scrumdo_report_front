@@ -15,6 +15,9 @@ requirejs.config({
     config: {
         "app/route":{
             basepath : "https://a5429.herokuapp.com/api/"
+        },
+        "app/collections/iterationsCollection":{
+            basepath : "https://a5429.herokuapp.com/api/"
         }
     }
 });
