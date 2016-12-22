@@ -14,8 +14,8 @@ var REQUIRED_FILES = [
 
 ];
 
-toolbox.options.debug = false;
-toolbox.options.cache.name = "scrum";
+toolbox.options.debug = true;
+toolbox.options.cache.name = "scrum1";
 
 toolbox.precache(REQUIRED_FILES);
 

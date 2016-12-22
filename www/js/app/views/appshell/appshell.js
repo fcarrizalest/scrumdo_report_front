@@ -8,7 +8,7 @@ define([
 ], function( Backbone , Mustache , template ,iteration_view ){ 
 
 	var View = Backbone.View.extend({ 
-		el:$(".page-content"),
+		el:$("#lista"),
 		initialize: function(app_router,$iterations_coleccion){ 
 			
 			this.app_router = app_router;
@@ -43,7 +43,7 @@ define([
             //create /update array view
             this.iViews = [];
            
-           
+
             //send model the method addOne
             this.collection.each(this.addOne);
         },
