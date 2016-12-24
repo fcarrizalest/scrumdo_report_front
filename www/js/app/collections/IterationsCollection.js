@@ -20,9 +20,7 @@ define([
         urlRoot : module.config().basepath + "iterations",
         initialize: function() { 
 
-            console.log(this);
-
-            console.log(this.url() );
+            
             var self = this;
             // setInterval(function() {
               self.fetch();
@@ -30,8 +28,11 @@ define([
               this.stories = new Stories();
               this.stories.url = module.config().basepath+'iterations/'+this.get('id')+'/stories';
               var suma_puntos = 0;
+              var trabajando = 0 ;
+              var terminados = 0;
 
               self.set('suma_puntos',0);
+
 
 
               this.stories.fetch( {success:function(collection,data,p3){
@@ -39,12 +40,23 @@ define([
                 collection.each(function(k,v){
 
                     suma_puntos += k.get('points');
+                    var cell = k.get('cell');
 
+
+                    if( cell.label == 'Doing' ){
+                        trabajando += k.get('points');
+                    }
+
+                    if( cell.label != 'Doing' && cell.label != 'Todo' ){
+                        terminados += k.get('points');
+                    }
 
 
                 });
 
                 self.set('suma_puntos',suma_puntos);
+                self.set('suma_trabajando_puntos',trabajando);
+                self.set('suma_terminados_puntos',terminados);
 
 
               }} );

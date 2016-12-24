@@ -22,7 +22,6 @@ define([
 		render: function() { 
 
 
-			console.log(this.model.get('project'));
 			//$(this.el).html(   this.model.getTitle() + " | " +this.model.get('story_count') + " | " + this.model.get('suma_puntos') ) ;
 
 			$(this.el).html(Mustache.to_html( template , this.model.toJSON()   ) );
