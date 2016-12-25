@@ -1,0 +1,1 @@
+define(["app/route"],function(i){var n=function(){i.initialize(),console.log("Inicia")};return{initialize:n}});

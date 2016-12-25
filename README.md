@@ -17,3 +17,13 @@ $ cd www
 $ python -m SimpleHTTPServer 
 ```
 
+
+
+### Contrucción
+
+```sh
+$ r.js -o build.js
+```
+
+
+
