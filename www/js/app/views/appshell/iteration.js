@@ -26,7 +26,18 @@ define([
 
 			$(this.el).html(Mustache.to_html( template , this.model.toJSON()   ) );
 
-		}
+		},
+		 events: {
+    		"click" : "detalle",
+  		},
+  		detalle:function(){
+
+  			console.log( this.model.get('id') );
+
+  			this.app_router.navigate("view/"+this.model.get('id'), {trigger: true, replace: true});
+
+
+  		}
 	});
 
 	return View;

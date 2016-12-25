@@ -10,6 +10,7 @@ define([
 
 		var AppRouter = Backbone.Router.extend({ 
 			 routes:{ 
+			 	"iteration/:id":         "view",
 			 	 "*actions": "defaultRoute" 
 			 }
 		});
@@ -59,6 +60,16 @@ define([
 		
 
 		app_router.on('route:defaultRoute', function(){ 
+
+			
+			 
+		}); 
+
+		app_router.on('route:view', function(iteration_id){ 
+
+
+			console.log(iteration_id);
+			
 
 			
 			 
