@@ -2,10 +2,11 @@ define([
 		'module',
 		'backbone',
 		'app/collections/iterationsCollection',
-		'app/views/appshell/appshell'
+		'app/views/appshell/appshell',
+		'app/views/appshell/iterationview'
 
 	],
-	function( module, Backbone  , iterations, AppshellView  ){
+	function( module, Backbone  , iterations, AppshellView ,iterationview ){
 
 
 		var AppRouter = Backbone.Router.extend({ 
@@ -24,7 +25,7 @@ define([
 		var $iterations_coleccion = new iterations(  );
 
 		var $appshell = new AppshellView( app_router , $iterations_coleccion  );
-
+		var $iterationview = new iterationview();
 
 		var dayOfWeek = 3;//friday
 		var date = new Date( );
@@ -70,7 +71,7 @@ define([
 
 			console.log(iteration_id);
 			
-
+			$iterationview.render();
 			
 			 
 		}); 
