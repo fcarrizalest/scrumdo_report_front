@@ -33,8 +33,6 @@ define([
 
               self.set('suma_puntos',0);
 
-
-
               this.stories.fetch( {success:function(collection,data,p3){
 
                 collection.each(function(k,v){
@@ -51,7 +49,7 @@ define([
                         terminados += k.get('points');
                     }
 
-
+                    self.set('stories',collection);
                 });
 
                 self.set('suma_puntos',suma_puntos);

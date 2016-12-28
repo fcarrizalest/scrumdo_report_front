@@ -8,7 +8,7 @@ define([
 ], function( Backbone , Mustache , template ,iteration_view ){ 
 
 	var View = Backbone.View.extend({ 
-		el:$("#lista"),
+		el:$(".page-content"),
 		initialize: function(app_router,$iterations_coleccion){ 
 			
 			this.app_router = app_router;
@@ -25,12 +25,14 @@ define([
 
 
 			$(this.el).html(Mustache.to_html( template  ) );
+
+            this.el = "#lista";
 			
 			
 		},
 		 addAll: function(){
            
-           console.log(2);
+           //console.log(2);
         
             //recorremos por cada vista guardada
             _.each(this.iViews,
