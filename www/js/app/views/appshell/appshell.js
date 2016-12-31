@@ -25,9 +25,8 @@ define([
 
 
 			$(this.el).html(Mustache.to_html( template  ) );
-
-            this.el = "#lista";
 			
+            this.addAll()
 			
 		},
 		 addAll: function(){
@@ -66,7 +65,7 @@ define([
             this.iViews.push(iView);
 
             //Add view in HomeView
-            $(this.el).append(iView.el);
+            $('#lista').append(iView.el);
         },
 		
 

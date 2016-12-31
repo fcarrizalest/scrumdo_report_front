@@ -62,7 +62,8 @@ define([
 
 		app_router.on('route:defaultRoute', function(){ 
 
-			
+			console.log('aaa');
+			$appshell.render();
 			 
 		}); 
 
