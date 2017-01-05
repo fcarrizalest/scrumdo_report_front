@@ -2,18 +2,12 @@ define([
     'underscore',
     'backbone',
     'module',
+    'app/collections/StoriesCollection',
 
-], function(_, Backbone , module){
+], function(_, Backbone , module,Stories){
 
 
-    var Stories = Backbone.Collection.extend({
-
-         parse: function(data) {
-
-            return data.data;
-        }
-
-    });
+    
 
 
     var modelT = Backbone.Model.extend({
