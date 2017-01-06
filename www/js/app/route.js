@@ -33,12 +33,8 @@ define([
 
 		var $appshell = new AppshellView( app_router , $iterations_coleccion  );
 		var $iterationview = new iterationview();
-
-		var dayOfWeek = 3;//friday
-		var date = new Date( );
-		date.setDate(date.getDate() + (dayOfWeek + 7 - date.getDay()) % 7);
-
-		$iterations_coleccion.url = module.config().basepath + "iterations/"+date.getFullYear() + "-"+( date.getMonth()+1 )+"-" + date.getDate();
+		
+		$iterations_coleccion.url = module.config().basepath + "iterations/actual";
 		$iterations_coleccion.fetch( {reset:true});	
 		
 
