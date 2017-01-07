@@ -28,6 +28,8 @@ define([
 			//$(this.el).html(   this.model.getTitle() + " | " +this.model.get('story_count') + " | " + this.model.get('suma_puntos') ) ;
 
 			console.log( this.model);
+
+            var project = this.model.get('project');
 			$(this.el).html(Mustache.to_html( template , this.model.toJSON()   ) );
 			console.log('renderV');
 
@@ -36,6 +38,8 @@ define([
 
 			console.log(this.collection);
 			this.addAll();
+
+            $('#ptitle').html( project.name )
 
 		},
 		 addAll: function(){
@@ -75,6 +79,8 @@ define([
 
             //Add view in HomeView
             $(this.el).append(iView.el);
+
+
         },
 		});
 

@@ -2,13 +2,33 @@
 
 
 <span class="mdl-list__item-primary-content">
-      <i class="material-icons ">event_note</i>
-      <span>{{points}} {{cell.label}}  </span>
-      <span class="mdl-list__item-sub-title">{{{summary}}} </span>
+     	
+
+		{{#users.length}}
+		<i class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{points}}">assignment_ind</i>
+		
+		{{/users.length}}
+
+		{{^users.length}}
+       		<i class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{points}}">assignment</i>
+       {{/users.length}}
+
+       <span>{{{summary}}}  </span>
+       
+      <span class="mdl-list__item-sub-title">
+
+      	<span class="mdl-chip">
+    <span class="mdl-chip__text">Basic Chip</span>
+</span>
+
+       </span>
 
 
 </span>
 
+<span class="mdl-list__item-secondary-content">
+
+	</span>
 
 
  
