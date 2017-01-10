@@ -39,7 +39,7 @@ define([
 			console.log(this.collection);
 			this.addAll();
 
-            $('#ptitle').html( project.name )
+            $('.ptitle').html( project.name )
 
 		},
 		 addAll: function(){

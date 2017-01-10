@@ -26,6 +26,8 @@ define([
 
 			$(this.el).html(Mustache.to_html( template  ) );
 			
+            $('.ptitle').html( "  " )
+
             this.addAll()
 			
 		},
