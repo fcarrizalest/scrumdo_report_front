@@ -1,1 +1,27 @@
 
+.cell{
+
+	color: white;
+}
+
+.Doing {
+
+	background-color: #3898db;
+
+}
+
+
+.Done {
+
+	background-color: #34cc73;
+
+}
+
+.Reviewing{
+	background-color: #f5764e;
+}
+
+.Todo{
+
+	background-color: rgb(116, 126, 137);
+}
