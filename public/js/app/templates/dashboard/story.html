@@ -1,0 +1,37 @@
+
+
+
+<span class="mdl-list__item-primary-content  ">
+     	
+
+		{{#users.length}}
+		<i class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{points}}">assignment_ind</i>
+		
+		{{/users.length}}
+
+		{{^users.length}}
+       		<i class="material-icons mdl-badge mdl-badge--overlap" data-badge="{{points}}">assignment</i>
+       {{/users.length}}
+
+       <span><a target="_blank" href="https://app.scrumdo.com/projects/story_permalink/{{id}}">#{{number}}</a> {{{summary}}}  </span>
+       
+      <span class="mdl-list__item-sub-title">
+
+      	
+      
+       </span>
+      
+
+
+</span>
+
+<span class="mdl-list__item-secondary-content cell {{cell.label}}">
+
+
+  {{cell.label}}
+
+
+</span>
+
+
+ 

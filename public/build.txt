@@ -12,6 +12,7 @@ js/app/main.js
 ----------------
 js/lib/underscore.js
 js/lib/backbone.js
+js/app/collections/StoriesCollection.js
 js/app/collections/iterationsCollection.js
 js/lib/mustache.js
 js/lib/text.js
@@ -19,6 +20,10 @@ text!app/templates/dashboard/dashboard.html
 text!app/templates/dashboard/iteration.html
 js/app/views/appshell/iteration.js
 js/app/views/appshell/appshell.js
+text!app/templates/dashboard/iterationview.html
+text!app/templates/dashboard/story.html
+js/app/views/appshell/storyview.js
+js/app/views/appshell/iterationview.js
 js/app/route.js
 js/app/app.js
 js/app/main.js

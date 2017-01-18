@@ -1,0 +1,1 @@
+define(["underscore","backbone","module"],function(e,n,r){var o=n.Collection.extend({parse:function(e){return e.data}});return o});
