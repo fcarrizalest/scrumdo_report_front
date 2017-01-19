@@ -68,6 +68,9 @@ define([
 
             //Add view in HomeView
             $('#lista').append(iView.el);
+
+            
+
         },
 		
 
