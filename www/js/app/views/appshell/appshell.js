@@ -72,6 +72,19 @@ define([
             
 
         },
+        events: {
+        "click #search" : "filter",
+      },
+      filter: function(){
+
+        console.log('Click Filter');
+       var dialog = document.querySelector('dialog');
+        if (! dialog.showModal) {
+          dialogPolyfill.registerDialog(dialog);
+        }
+        dialog.showModal();
+        setInterval(function(){ dialog.close() }, 3000);
+      }
 		
 
 
