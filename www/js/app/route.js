@@ -38,13 +38,12 @@ define([
 		$iterations_coleccion.fetch( {reset:true});	
 		
 
-		console.log("pp");
-		console.log(module);
+		
 
 		if(navigator.serviceWorker != undefined ){
 
 			if (navigator.serviceWorker.controller) {
-				console.log("tengo ya un controller");
+				
 				var url = navigator.serviceWorker.controller.scriptURL;
 				
 				  
@@ -58,7 +57,7 @@ define([
 			}
 
 		}else{
-			console.log("Navegador sin SW");
+			
 		}
 
 
@@ -67,7 +66,7 @@ define([
 
 		app_router.on('route:defaultRoute', function(){ 
 
-			console.log('aaa');
+			
 			$appshell.render();
 			 
 		}); 

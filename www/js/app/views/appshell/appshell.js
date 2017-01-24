@@ -33,7 +33,7 @@ define([
 		},
 		 addAll: function(){
            
-           //console.log(2);
+           
         
             //recorremos por cada vista guardada
             _.each(this.iViews,
@@ -77,7 +77,7 @@ define([
       },
       filter: function(){
 
-        console.log('Click Filter');
+        
        var dialog = document.querySelector('dialog');
         if (! dialog.showModal) {
           dialogPolyfill.registerDialog(dialog);

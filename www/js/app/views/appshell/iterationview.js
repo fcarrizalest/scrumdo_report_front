@@ -17,26 +17,22 @@ define([
             // this.listenTo(this.model, 'change', this.render);
             // this.listenTo(this.model, 'sync', this.render);
             
-            console.log('initV');
-            
             this.iViews = [];
         },
 		render: function() { 
 
-			console.log('render');
-
 			//$(this.el).html(   this.model.getTitle() + " | " +this.model.get('story_count') + " | " + this.model.get('suma_puntos') ) ;
 
-			console.log( this.model);
+			
 
             var project = this.model.get('project');
 			$(this.el).html(Mustache.to_html( template , this.model.toJSON()   ) );
-			console.log('renderV');
+			
 
 			this.collection = this.model.get('stories');
 			 _.bindAll(this, 'addOne', 'addAll');
 
-			console.log(this.collection);
+			
 			this.addAll();
 
             $('.ptitle').html( project.name )
@@ -44,7 +40,7 @@ define([
 		},
 		 addAll: function(){
            
-           //console.log(2);
+           
         
             //recorremos por cada vista guardada
             _.each(this.iViews,
